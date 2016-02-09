@@ -4,7 +4,7 @@ Created by Stavros Tsogkas at CentraleSupelec, Paris.
 
 ### Introduction
 
-This code can be used to train and evaluate CNNs as described in our [paper](https://hal.archives-ouvertes.fr/hal-01265500v1) published at ISBI 2016. You can also find links to download the [pre-computed probability maps](download-probabilities) for all the volumes in the [IBSR dataset](https://www.nitrc.org/frs/?group_id=48) that we used in our experiments. 
+This code can be used to train and evaluate CNNs as described in our [paper](https://hal.archives-ouvertes.fr/hal-01265500v1) published at ISBI 2016. You can also find links to download the [pre-computed probability maps](#download) for all the volumes in the [IBSR dataset](https://www.nitrc.org/frs/?group_id=48) that we used in our experiments. 
 
 ### License
 
@@ -15,7 +15,7 @@ Our code is released under the MIT License (refer to the LICENSE file for detail
 If you find our code or *CNN*-produced probability maps useful for your research, please cite:
 
     @inproceedings{shakeri2016subcortical,
-        Author = {Shakeri, Mahsa and Tsogkas, Stavros and Lippe, Sarah and Kadoury, Samuel and Paragios, Nikos and Kokkinos, Iasonas},
+        Author = {Shakeri, Mahsa and Tsogkas, Stavros and Ferrante, Enzo and Lippe, Sarah and Kadoury, Samuel and Paragios, Nikos and Kokkinos, Iasonas},
         Title = {Sub-cortical Brain Structure Segmentation Using F-CNNs},
         Booktitle = {International Symposium on Biomedical Imaging ({ISBI})},
         Year = {2016}
@@ -24,8 +24,8 @@ If you find our code or *CNN*-produced probability maps useful for your research
 If you use the *RF*-produced probability maps please cite:
 
     @inproceedings{alchatzidis2014discrete,
-        Author = {Discrete multi atlas segmentation using agreement constraints},
-        Title = {Sub-cortical Brain Structure Segmentation Using F-CNNs},
+        Author = {Alchatzidis, Stavros and Sotiras, Aristeidis and Paragios, Nikos},
+        Title = {Discrete multi atlas segmentation using agreement constraints},
         Booktitle = {British Machine Vision Conference ({BMVC})},
         Year = {2014}
     }
@@ -41,7 +41,7 @@ If you use the *RF*-produced probability maps please cite:
 ### Requirements: software
 
 1. A recent version of MATLAB. All our experiments were performed using MATLAB 2014a and Ubuntu 14.04.
-2. [Our modified version of MatConvNet](https://github.com/tsogkas/matconvnet), with support for holes (included in this repository). 
+2. Our modified version of [MatConvNet](https://github.com/tsogkas/matconvnet), with support for holes (included in this repository). 
 3. [NifTI tools](http://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) for loading NifTI files.
 
 ### Requirements: hardware
