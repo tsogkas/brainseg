@@ -35,7 +35,7 @@ If you use the *RF*-produced probability maps please cite:
 1. [Requirements: software](#requirements-software)
 2. [Requirements: hardware](#requirements-hardware)
 3. [Installation](#installation)
-4. [Download pre-computed probability maps for IBSR](#download-probabilities)
+4. [Download pre-computed probability maps for IBSR](#download)
 5. [Usage](#usage)
 
 ### Requirements: software
