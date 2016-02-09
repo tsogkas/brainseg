@@ -48,7 +48,7 @@ If you use the *RF*-produced probability maps please cite:
 
 Our model is small enough to be trained using Nvidia GTX980 GPUs, demanding around 3GB of GPU RAM. If you want to experiment with different architectures, you may need GPUs with more RAM (e.g. Nvidia Titan or Tesla K40). You will probably need a computer with a good amount of CPU RAM, at least 12GB or more, depending on the amount of data augmentation. 
 
-### Installation (sufficient for the demo)
+### Installation
 
 1. Clone the brainseg repository.
   
@@ -58,7 +58,7 @@ Our model is small enough to be trained using Nvidia GTX980 GPUs, demanding arou
 
 4. Create a folder `brainseg/data` (this can be a symlink), place the downloaded file inside and extract it. This will result in a `brainseg/data/IBSR_nifti_stripped` directory. 
 
-_Make sure that `utils`, `matconvnet`, and `NifTI tools` are included in the MATLAB working path._ 
+_Make sure that_ `utils`, `matconvnet`, _and_ `NifTI tools` _are included in the MATLAB working path._ 
 
 ### Download pre-computed probability maps for IBSR
 
