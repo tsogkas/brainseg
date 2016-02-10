@@ -41,7 +41,7 @@ If you use the *RF*-produced probability maps please cite:
 ### Requirements: software
 
 1. A recent version of MATLAB. All our experiments were performed using MATLAB 2014a and Ubuntu 14.04.
-2. Our modified version of [MatConvNet](https://github.com/tsogkas/matconvnet), with support for holes (included in this repository). 
+2. [Our modified version of MatConvNet](https://github.com/tsogkas/matconvnet), with support for holes (included in this repository). 
 3. [NifTI tools](http://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image) for loading NifTI files.
 
 ### Requirements: hardware
@@ -60,7 +60,7 @@ Our model is small enough to be trained using Nvidia GTX980 GPUs, demanding arou
 
 _Make sure that_ `utils`, `matconvnet`, _and_ `NifTI tools` _are included in the MATLAB working path._ 
 
-### Download pre-computed probability maps for IBSR
+### Download pre-computed probability maps for IBSR <a name="download"></a>
 
 Pre-computed probability maps for all the MRI volumes in IBSR can be found in the following links:
 	
