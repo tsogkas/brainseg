@@ -34,7 +34,7 @@ opts.numFetchThreads = 12 ;
 opts.lite = false ;
 opts.expDir = 'results/cnn';
 opts.subtractMean = 0;  % calculate and subtract mean image from each training image
-opts.train.batchSize = 30; % increase this value if you have enough GPU RAM
+opts.train.batchSize = 10; % increase this value if you have enough GPU RAM
 opts.train.continue = true ;
 opts.train.gpus = [];
 opts.train.prefetch = true ;
@@ -56,7 +56,7 @@ disp('Database initialization')
 switch dataset
     case 'IBSR'
         net  = cnnIBSRv2Init();
-        imdb = setupImdbIBSRv2(net,indsTrain,indsVal,1,view);
+        imdb = setupImdbIBSRv2(net,indsTrain,indsVal,0,view);
     case 'RE'
         warning('RE is a proprietary dataset. Any RE-related code is included for archiving reasons.')
         net = cnnREInit();
@@ -109,7 +109,7 @@ switch view
     case {2, 'sagittal'} 
         permvec = [2 3 1];
     case {3, 'coronal'} 
-        permvec = [1 3 2];
+        permvec = [3 1 2];
     otherwise
         error('Invalid view')
 end
@@ -143,7 +143,7 @@ for i=1:nFiles
     for j=1:numel(ibsrLabels)
         tmpSeg(seg.img == ibsrLabels(j)) = labelMap(ibsrLabels(j));
     end
-    images(:,:,:,i) = 255*bsxfun(@rdivide,img.img, max(max(img.img)));
+    images(:,:,:,i) = 255*bsxfun(@rdivide,single(img.img), single(max(max(img.img))));
     labels(:,:,:,i) = tmpSeg;
     progress('Reading ISBR images',i,nFiles,ticStart);
 end
@@ -248,13 +248,15 @@ end
 % This reshape is necessary for vl_softmaxloss to work properly.
 labelsTrain = reshape(labelsTrain, outsz(1),outsz(2),1,[]);
 labelsVal   = reshape(labelsVal,   outsz(1),outsz(2),1,[]);
-imagesTrain = cat(3, imagesTrain, imagesVal); clear imagesVal;
+imagesTrain = reshape(imagesTrain, insz(1), insz(2), 1,[]);
+imagesVal   = reshape(imagesVal,   insz(1), insz(2), 1,[]);
+imagesTrain = cat(4, imagesTrain, imagesVal); clear imagesVal;
 labelsTrain = cat(4, labelsTrain, labelsVal); clear labelsVal;
 imdb.images = imagesTrain; 
 imdb.labels = labelsTrain+1; % add 1 for vl_nnsoftmaxloss to work
 assert(isinrange(imdb.labels,[1,numel(ibsrLabels)]),'Labels not in range')
-assert(size(imdb.images,3) == size(imdb.labels,4))
-assert(max(imdb.val(:)) == size(imdb.images,3))
+assert(size(imdb.images,4) == size(imdb.labels,4))
+assert(max(imdb.val(:)) == size(imdb.images,4))
 
 % -------------------------------------------------------------------------
 function imdb = setupImdbRE(net,indsTrain,indsVal,augment)
