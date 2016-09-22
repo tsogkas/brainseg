@@ -36,7 +36,6 @@ If you use the *RF*-produced probability maps please cite:
 2. [Requirements: hardware](#requirements-hardware)
 3. [Installation](#installation)
 4. [Download pre-computed probability maps for IBSR](#download)
-5. [Usage](#usage)
 
 ### Requirements: software
 
@@ -54,9 +53,7 @@ Our model is small enough to be trained using Nvidia GTX980 GPUs, demanding arou
   
 2. Clone my [utils](https://github.com/tsogkas/utils) and [matconvnet](https://github.com/tsogkas/matconvnet) repos. Install MatConvNet following the steps described [here](http://www.vlfeat.org/matconvnet/install/).
 
-3. Download the [IBSR dataset](https://www.nitrc.org/frs/?group_id=48). You will have to create a NITRC account, if you do not already have one.
-
-_NOTE:_ In our experiments we used cropped versions of the original volumes. We do not make that version of the data available to avoid copyright violation. If you want access to the cropped data, please send us an email. 
+3. Download the [IBSR dataset](https://www.nitrc.org/frs/?group_id=48). You will have to create a NITRC account, if you do not already have one. _NOTE:_ In our experiments we used cropped versions of the original volumes. We do not make that version of the data available to avoid copyright violation. If you want access to the cropped data, please send us an email. 
 
 4. Create a folder `brainseg/data` (this can be a symlink), place the downloaded file inside and extract it. This will result in a `brainseg/data/IBSR_nifti_stripped` directory. 
 
