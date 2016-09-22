@@ -56,6 +56,8 @@ Our model is small enough to be trained using Nvidia GTX980 GPUs, demanding arou
 
 3. Download the [IBSR dataset](https://www.nitrc.org/frs/?group_id=48). You will have to create a NITRC account, if you do not already have one.
 
+_NOTE:_ In our experiments we used cropped versions of the original volumes. We do not make that version of the data available to avoid copyright violation. If you want access to the cropped data, please send us an email. 
+
 4. Create a folder `brainseg/data` (this can be a symlink), place the downloaded file inside and extract it. This will result in a `brainseg/data/IBSR_nifti_stripped` directory. 
 
 _Make sure that_ `utils`, `matconvnet`, _and_ `NifTI tools` _are included in the MATLAB working path._ 
@@ -72,7 +74,3 @@ Pre-computed probability maps for all the MRI volumes in IBSR can be found in th
 [part4](http://cvn.ecp.fr/data/brainsegm/cnn_prob_nii_fold_4.zip)
 
 The MR brain data sets and their manual segmentations were provided by the Center for Morphometric Analysis at Massachusetts General Hospital and are available at http://www.cma.mgh.harvard.edu/ibsr/.
-
-### Usage
-
-Coming soon.
