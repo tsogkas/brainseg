@@ -61,13 +61,7 @@ _Make sure that_ `utils`, `matconvnet`, _and_ `NifTI tools` _are included in the
 
 ### Download pre-computed probability maps for IBSR <a name="download"></a>
 
-Pre-computed probability maps for all the MRI volumes in IBSR can be found in the following links:
-	
-- [Probabilities computed with Random Forests](http://cvn.ecp.fr/data/brainsegm/RF_prob.zip)
-- Probabilities computed with CNN 
-[part1](http://cvn.ecp.fr/data/brainsegm/cnn_prob_nii_fold_1.zip)
-[part2](http://cvn.ecp.fr/data/brainsegm/cnn_prob_nii_fold_2.zip)
-[part3](http://cvn.ecp.fr/data/brainsegm/cnn_prob_nii_fold_3.zip)
-[part4](http://cvn.ecp.fr/data/brainsegm/cnn_prob_nii_fold_4.zip)
+Pre-computed probability maps for all the MRI volumes in IBSR with Random Forest and our CNN can be found here:
+https://drive.google.com/drive/folders/0Bx09CuSnoEa1YTY1S2tXNWFySHc	
 
 The MR brain data sets and their manual segmentations were provided by the Center for Morphometric Analysis at Massachusetts General Hospital and are available at http://www.cma.mgh.harvard.edu/ibsr/.
